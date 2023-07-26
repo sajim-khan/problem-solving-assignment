@@ -85,3 +85,29 @@ const result = findTwoNumbersWithSum([1, 3, 6, 8, 11, 15], 9);
 console.log("Indices of the two numbers:", result);
 
 
+
+//Task 5: Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
+
+function calculator(num1, operator, num2) {
+  if (operator === "+") {
+    return num1 + num2;
+  } else if (operator === "-") {
+    return num1 - num2;
+  } else if (operator === "*") {
+    return num1 * num2;
+  } else if (operator === "/") {
+    return num1 / num2;
+  } else {
+    return "Invalid operator";
+  }
+}
+
+
+const add = calculator(10, '+', 10);
+const sub = calculator(10, '-', 5);
+const mul = calculator(10, '*', 10);
+const divide = calculator(10, '/', 5);
+console.log(`Add : ${add},  Sub : ${sub},  Mul : ${mul},  Divide : ${divide}`);
+
+
+
