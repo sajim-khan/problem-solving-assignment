@@ -2,15 +2,15 @@
 
 //Example Input: "hello world" Example Output: "dlrow olleh"
 
-// function reverseStr(string) {
-//   let reversedStr = ""
-//   const myStr = string.toString().toLowerCase();
-//   for (let i = string.length - 1; i >=0; i--){
-//     reversedStr+=myStr[i]
-//   }
-//   console.log(`Input: ${myStr} \nOutput: ${reversedStr} `);
-// }
-// reverseStr("Hello World") //Output: dlrow olleh 
+function reverseStr(string) {
+  let reversedStr = ""
+  const myStr = string.toString().toLowerCase();
+  for (let i = string.length - 1; i >=0; i--){
+    reversedStr+=myStr[i]
+  }
+  console.log(`Input: ${myStr} \nOutput: ${reversedStr} `);
+}
+//reverseStr("Hello World") //Output: dlrow olleh 
 
 
 
@@ -33,9 +33,29 @@ function sumOfPositiveNum(array) {
     `Input Array: [${array}] \nPositive number is : ${positiveArray} \nSum of all positive numbers is : ${sum} `
   );
 }
-sumOfPositiveNum([2, -5, 10, -3, 7]);
+//sumOfPositiveNum([2, -5, 10, -3, 7]); //Output: 19
 
 
 
+//Task 3: Write a JavaScript program to find the most frequent element in an array and return it. 
+//Example Input: [3, 5, 2, 5, 3, 3, 1, 4, 5] Example Output: 3
 
+function findMostFrequentElement(arr) {
+  const frequency = {};
+  let mostFrequentElement;
+  let highestFrequency = 0;
 
+  arr.forEach((element) => {
+    frequency[element] = (frequency[element] || 0) + 1;
+
+    if (frequency[element] > highestFrequency) {
+      highestFrequency = frequency[element];
+      mostFrequentElement = element;
+    }
+  });
+
+  return mostFrequentElement;
+}
+
+const result = findMostFrequentElement([3, 5, 2, 5, 3, 3, 1, 4, 5]);
+console.log(`Most Frequent Element is : ${result}`); // Output: 3
