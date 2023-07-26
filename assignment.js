@@ -110,7 +110,6 @@ console.log(`Add : ${add},  Sub : ${sub},  Mul : ${mul},  Divide : ${divide}`);
 
 // Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
 
-
 const generateRandomPass = (length) => {
   const uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
@@ -130,7 +129,7 @@ const generateRandomPass = (length) => {
 };
 
 const randomPassword = generateRandomPass(8);
-console.log(randomPassword);
+console.log(`Random Password : ${randomPassword}`);
 
 
 
