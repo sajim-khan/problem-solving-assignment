@@ -143,3 +143,4 @@ function findSecondSmallest(array) {
 
 const secondSmallest = findSecondSmallest([9, 4, 3, 5]);
 console.log(secondSmallest); // Output: 4
+
