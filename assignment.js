@@ -10,7 +10,7 @@ function reverseStr(string) {
   }
   console.log(`Input: ${myStr} \nOutput: ${reversedStr} `);
 }
-//reverseStr("Hello World") //Output: dlrow olleh 
+reverseStr("Hello World") //Output: dlrow olleh 
 
 
 
@@ -18,7 +18,7 @@ function reverseStr(string) {
 
 //Example Input: [2, -5, 10, -3, 7] Example Output: 19
 
-function sumOfPositiveNum(array) {
+function sumOfAllPositiveNum(array) {
   let myArray = array.length;
   let sum = 0;
   let positiveArray = [];
@@ -28,11 +28,9 @@ function sumOfPositiveNum(array) {
       positiveArray.push(array[i]);
     }
   }
-  console.log(
-    `Input Array: [${array}] \nPositive number is : ${positiveArray} \nSum of all positive numbers is : ${sum} `
-  );
+  console.log(`Sum of all positive numbers is : ${sum}`);
 }
-//sumOfPositiveNum([2, -5, 10, -3, 7]); //Output: 19
+sumOfAllPositiveNum([2, -5, 10, -3, 7]); //Output: 19
 
 
 
@@ -56,8 +54,8 @@ function findMostFrequentElement(arr) {
   return mostFrequentElement;
 }
 
-// const result = findMostFrequentElement([3, 5, 2, 5, 3, 3, 1, 4, 5]);
-// console.log(`Most Frequent Element is : ${result}`); // Output: 3
+const results = findMostFrequentElement([3, 5, 2, 5, 3, 3, 1, 4, 5]);
+console.log(`Most Frequent Element is : ${results}`); // Output: 3
 
 
 
@@ -133,3 +131,16 @@ const generateRandomPass = (length) => {
 
 const randomPassword = generateRandomPass(8);
 console.log(randomPassword);
+
+
+
+// Task 8: Find the second smallest element in an array of numbers.
+
+function findSecondSmallest(array) {
+  array.sort((a, b) => a - b);
+  const secondMin = array[1];
+  return secondMin;
+}
+
+const secondSmallest = findSecondSmallest([9, 4, 3, 5]);
+console.log(secondSmallest); // Output: 4
